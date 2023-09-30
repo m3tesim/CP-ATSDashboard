@@ -34,7 +34,7 @@ export default function TopNAV() {
   };
 
   return (
-    <nav className="w-full">
+    <nav className="w-full  mb-8">
       <div className="flex justify-between w-full">
         <div>
           <h1 className="text-blue-800 text-xl font-semibold">
