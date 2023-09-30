@@ -2,7 +2,7 @@ import Arrow from "../assets/Arrow-Chevron_Right.svg";
 import Calendar from "../assets/Calendar_Check.svg";
 import Document from "../assets/File_Document.svg";
 import House from "../assets/House.svg";
-import Settings from "../assets/Settings.svg";
+import Settings from "../assets/Interface-Settingssetting.png";
 import Share from "../assets/Share.svg";
 import Notebook from "../assets/Notebook.svg";
 import Users_Group from "../assets/Users_Group.svg";
