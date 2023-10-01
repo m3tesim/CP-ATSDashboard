@@ -4,6 +4,50 @@ import SideNAV from "./components/SideNAV";
 import TopNAV from "./components/TopNAV";
 import CheckBox from "./assets/Checkbox.svg";
 
+const users = [
+  {
+    name: "Aaliyah Sanderson",
+    city: "Riyadh, Saudi Arabia",
+    qualification: "Bachelor - Cambridge University (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+  {
+    name: "John Doe",
+    city: "Bostom, USA",
+    qualification: "Bachelor - MIT (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+  {
+    name: "Thomas Matt",
+    city: "Edinburgh, UK",
+    qualification: "Bachelor - Harvard University (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+  {
+    name: "Kamilia Smith",
+    city: "London, UK",
+    qualification: "Bachelor - Boston University (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+  {
+    name: "Roy Jade",
+    city: "Cambridge,  UK",
+    qualification: "Bachelor - Yale (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+  {
+    name: "Ahmed Salman",
+    city: "New York, USA",
+    qualification: "Bachelor - Cambridge University (2023 - 2023)",
+    tags: ["#top_candidate", "#top_candidate"],
+    skills: ["Marketing", "branding", "Design"],
+  },
+];
 export default function App() {
   return (
     <div className="flex bg-indigo-50">
@@ -40,33 +84,39 @@ export default function App() {
                 </div>
               </nav>
             </div>
-            <div className="border-b border-solid mx-4">
-              <div className="flex place-items-center px-8 w-7/12 py-6 ">
-                <div className="flex place-items-center">
-                  <img src={CheckBox} width={16} height={16} />
-                </div>
-                <div className="w-16 h-16 m-auto flex font-semibold justify-center place-items-center bg-indigo-100 rounded-full p-3 text-2xl text-indigo-300 ">
-                  AS
-                </div>
-
-                <div>
-                  <p className="font-semibold">Aaliyah Sanderson</p>
-                  <p>Riyadh, Saudi Arabia</p>
-                  <p className="font-light">
-                    Bachelor - Cambridge University (2023 - 2023)
-                  </p>
-                  <div>
-                    <span className="text-blue-700">#top_candidate</span>{" "}
-                    <span className="text-blue-700">#top_candidate</span>
+            {users.map((user) => (
+              <div className="border-b border-solid mx-4">
+                <div className="flex place-items-center px-4 py-6 gap-8 ">
+                  <div className="flex place-items-center">
+                    <img src={CheckBox} width={16} height={16} />
                   </div>
-                  <div className="pt-1">
-                    <span className="text-xs font-light text-center rounded-2xl px-3 py-1 bg-cyan-50 text-cyan-900 font-medium">
-                      New York
-                    </span>
+                  <div className="w-16 h-16 flex font-semibold justify-center place-items-center bg-indigo-100 rounded-full p-3 text-2xl text-indigo-200 ">
+                    AS
+                  </div>
+
+                  <div>
+                    <p className="font-semibold">{user.name}</p>
+                    <p>{user.city}</p>
+                    <p className="font-light my-2">{user.qualification} </p>
+                    <div>
+                      <span className="text-blue-700">#top_candidate</span>{" "}
+                      <span className="text-blue-700">#top_candidate</span>
+                    </div>
+                    <div className="pt-1 flex gap-2">
+                      <span className="text-xs text-center rounded-2xl px-3 py-1 bg-cyan-50 text-cyan-800 font-medium">
+                        Marketing
+                      </span>
+                      <span className="text-xs text-center rounded-2xl px-3 py-1 bg-cyan-50 text-cyan-800 font-medium">
+                        Design
+                      </span>
+                      <span className="text-xs text-center rounded-2xl px-3 py-1 bg-cyan-50 text-cyan-800 font-medium">
+                        Branding
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </main>
       </div>
