@@ -24,18 +24,19 @@ const Opportunities = [
   { label: "Offer", value: "25" },
   { label: "Withdrawn", value: "25" },
 ];
-const icons = [Tag, Mail, UserCheck, UserClose, UserVoice];
+const icons = [Tag, UserClose, UserCheck, UserVoice, Mail];
 type Option = { label: string; value?: string };
 
 export default function TopNAV() {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
   const handleSelect = (option: Option | null) => {
+    selectedOption;
     setSelectedOption(option);
   };
 
   return (
-    <nav className="w-full  mb-8">
+    <nav className="w-full  mb-12">
       <div className="flex justify-between w-full">
         <div>
           <h1 className="text-blue-800 text-xl font-semibold">
@@ -43,33 +44,37 @@ export default function TopNAV() {
           </h1>
           <p>London</p>
         </div>
-        <div className="flex mx-8">
+
+        <div className="flex mx-8 justify-between gap-20">
           <div className="flex place-items-center">
             <Dropdown
               options={Opportunities}
               onSelect={handleSelect}
               title="Opportunity Browsing"
-              classNames="bg-white text-blue-800 font-semibold flex gap-8"
+              classNames="bg-white text-blue-800 font-semibold flex gap-16"
             />
-          </div>
-          <div className="flex gap-2 mx-4">
-            {icons.map((icon, index) => (
-              <div
-                key={index}
-                className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3"
-              >
-                <img src={icon} width={24} height={24} />
-              </div>
-            ))}
           </div>
 
-          <div className="flex place-items-center">
-            <Dropdown
-              options={options}
-              onSelect={handleSelect}
-              title="Move To Video Interview I"
-              classNames="bg-blue-800 text-white font-normal"
-            />
+          <div className="flex justify-between">
+            <div className="flex gap-2 mx-4">
+              {icons.map((icon, index) => (
+                <div
+                  key={index}
+                  className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3"
+                >
+                  <img src={icon} width={24} height={24} />
+                </div>
+              ))}
+            </div>
+
+            <div className="flex place-items-center">
+              <Dropdown
+                options={options}
+                onSelect={handleSelect}
+                title="Move To Video Interview I"
+                classNames="bg-blue-700 text-white font-normal"
+              />
+            </div>
           </div>
         </div>
       </div>

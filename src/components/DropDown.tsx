@@ -26,7 +26,7 @@ const Dropdown = ({ options, onSelect, classNames, title }: Props) => {
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className={`inline-flex justify-between px-4 text-sm ${classNames} rounded-2xl focus:outline-none  flex place-items-center`}
         >
-          <span className="border-white border-r-2 w-48 border-solid py-3 pr-4 h-full">
+          <span className="border-white border-r-2 w-48 border-solid py-3 text-left h-full">
             {selectedOption ? selectedOption.label : title}
           </span>
           <svg

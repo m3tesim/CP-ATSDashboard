@@ -12,7 +12,7 @@ export default function SideNAV() {
   return (
     <nav className="z-10 w-20 h-full sticky bg-white shadow-md text-center justify-center flex py-8 place-items-center">
       <div className="flex flex-col gap-8 m-auto justify-center place-items-center">
-        <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-gray-300 rounded-3xl"></div>
+        <div className="w-10 h-10 m-auto flex justify-center place-items-center bg-gray-300 rounded-3xl"></div>
 
         <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-indigo-100 rounded-xl p-3">
           <img src={House} width={24} height={24} />
