@@ -24,6 +24,7 @@ const Opportunities = [
   { label: "Offer", value: "25" },
   { label: "Withdrawn", value: "25" },
 ];
+const icons = [Tag, Mail, UserCheck, UserClose, UserVoice];
 type Option = { label: string; value?: string };
 
 export default function TopNAV() {
@@ -52,21 +53,14 @@ export default function TopNAV() {
             />
           </div>
           <div className="flex gap-2 mx-4">
-            <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3">
-              <img src={Tag} width={24} height={24} />
-            </div>
-            <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3">
-              <img src={UserClose} width={24} height={24} />
-            </div>
-            <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3">
-              <img src={UserCheck} width={24} height={24} />
-            </div>
-            <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3">
-              <img src={UserVoice} width={24} height={24} />
-            </div>
-            <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3">
-              <img src={Mail} width={24} height={24} />
-            </div>
+            {icons.map((icon, index) => (
+              <div
+                key={index}
+                className="w-12 h-12 m-auto flex justify-center place-items-center bg-white rounded-xl p-3"
+              >
+                <img src={icon} width={24} height={24} />
+              </div>
+            ))}
           </div>
 
           <div className="flex place-items-center">

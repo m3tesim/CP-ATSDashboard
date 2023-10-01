@@ -10,8 +10,8 @@ import Heart from "../assets/Heart.svg";
 
 export default function SideNAV() {
   return (
-    <nav className="z-10 w-20 h-full sticky bg-white shadow-md text-center justify-center flex py-12 place-items-center">
-      <div className="flex flex-col gap-12 m-auto justify-center place-items-center">
+    <nav className="z-10 w-20 h-full sticky bg-white shadow-md text-center justify-center flex py-8 place-items-center">
+      <div className="flex flex-col gap-8 m-auto justify-center place-items-center">
         <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-gray-300 rounded-3xl"></div>
 
         <div className="w-12 h-12 m-auto flex justify-center place-items-center bg-indigo-100 rounded-xl p-3">
@@ -19,9 +19,7 @@ export default function SideNAV() {
         </div>
         <img src={Users_Group} width={24} height={24} />
         <img src={Calendar} width={24} height={24} />
-
         <img src={Share} width={24} height={24} />
-
         <img src={Document} width={24} height={24} />
         <img src={Notebook} width={24} height={24} />
         <img src={Heart} width={24} height={24} />
