@@ -1,51 +1,10 @@
 import CheckBox from "../assets/Checkbox.svg";
+import { User } from "../usersData";
 
-const users = [
-  {
-    name: "Aaliyah Sanderson",
-    city: "Riyadh, Saudi Arabia",
-    qualification: "Bachelor - Cambridge University (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-  {
-    name: "John Doe",
-    city: "Bostom, USA",
-    qualification: "Bachelor - MIT (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-  {
-    name: "Thomas Matt",
-    city: "Edinburgh, UK",
-    qualification: "Bachelor - Harvard University (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-  {
-    name: "Kamilia Smith",
-    city: "London, UK",
-    qualification: "Bachelor - Boston University (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-  {
-    name: "Roy Jade",
-    city: "Cambridge,  UK",
-    qualification: "Bachelor - Yale (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-  {
-    name: "Ahmed Salman",
-    city: "New York, USA",
-    qualification: "Bachelor - Cambridge University (2023 - 2023)",
-    tags: ["#top_candidate", "#top_candidate"],
-    skills: ["Marketing", "branding", "Design"],
-  },
-];
-
-export default function UsersDashboard() {
+type Props = {
+  users: User[];
+};
+export default function UsersDashboard({ users }: Props) {
   return (
     <div className="bg-white rounded-lg mx-8 w-10/12">
       <div className="p-4 border-b border-solid mx-4">
@@ -72,8 +31,8 @@ export default function UsersDashboard() {
           </div>
         </nav>
       </div>
-      {users.map((user) => (
-        <div className="border-b border-solid mx-4">
+      {users.map((user, index) => (
+        <div key={index} className="border-b border-solid mx-4">
           <div className="flex place-items-center px-4 py-6 gap-8 ">
             <div className="flex place-items-center">
               <img src={CheckBox} width={16} height={16} />
